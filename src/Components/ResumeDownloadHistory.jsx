@@ -3,10 +3,10 @@ import { FileText } from "lucide-react";
 
 const ResumeDownloadHistory = () => {
   const resumes = [
-     { id: 1, name: "IT Resume 1", file: "/resumes/it_resume_1.pdf" },
-     { id: 2, name: "IT Resume 2", file: "/resumes/it_resume_2.pdf" },
-    { id: 3, name: "IT Resume 3", file: "/resumes/it_resume_3.pdf" },
-    { id: 4, name: "IT Resume 4", file: "/resumes/it_resume_4.pdf" },
+     { id: 1, name: "IT Resume", file: "/resumes/it_resume_1.pdf" },
+     { id: 2, name: "IT Resume", file: "/resumes/it_resume_2.pdf" },
+    { id: 3, name: "IT Resume", file: "/resumes/it_resume_3.pdf" },
+    { id: 4, name: "IT Resume", file: "/resumes/it_resume_4.pdf" },
 
 
   ];
@@ -27,12 +27,12 @@ const ResumeDownloadHistory = () => {
             className="flex flex-col items-center justify-center rounded-xl p-6 "
           >
             <FileText className="text-purple-400 w-10 h-10 mb-3" />
-            <p className=" text-gray-800 mb-2">{resume.name}</p>
+            <p className=" text-gray-800 mb-2 text-sm">{resume.name}</p>
 
             <a
               href={resume.file}
               download
-              className="text-red-500  hover:underline"
+              className="text-red-500  hover:underline text-sm"
             >
               DOWNLOAD
             </a>

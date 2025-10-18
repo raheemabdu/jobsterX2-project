@@ -11,7 +11,7 @@ const ATSOptimizationTips = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
     
         <div>
-          <ul className=" list-inside text-gray-700 space-y-2">
+          <ul className=" list-inside text-gray-700 space-y-2 list-disc">
             <li>Use standard section headings.</li>
             <li>Include relevant keywords from job descriptions.</li>
             <li>Save in both PDF and Word formats.</li>
@@ -21,7 +21,7 @@ const ATSOptimizationTips = () => {
 
       
         <div>
-          <ul className=" text-gray-700 space-y-2">
+          <ul className=" text-gray-700 space-y-2 list-disc">
             <li>Avoid complex graphics or images.</li>
             <li>Don,t use tables or columns.</li>
             <li>Avoid unusual fonts or formatting.</li>

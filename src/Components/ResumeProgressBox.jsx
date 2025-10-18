@@ -8,7 +8,7 @@ const ResumeProgressBox = () => {
         <h2 className="text-xl font-semibold">Your Resume Progress</h2>
 
         <div className="flex gap-3">
-          <button className="  px-4 py-2 rounded-lg ">
+          <button className="  px-3   border-1 ">
             Preview Resume
           </button>
           <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">
@@ -29,17 +29,17 @@ const ResumeProgressBox = () => {
       </div>
 
      
-      <div className="flex flex-wrap gap-3">
-        <button className="flex items-center justify-between  px-4 py-2 rounded-lg w-[180px]  transition">
-          <span className="text-gray-700">Personal Info</span>
+      <div className="flex items-center gap-2">
+        <button className="">
+          <span className="text-gray-700 px-4">Personal Info</span>
         </button>
 
-        <button className="flex items-center justify-between px-4 py-2 rounded-lg w-[180px]  transition">
-          <span className="text-gray-700">Experience</span>
+        <button className="">
+          <span className="text-gray-700 px-40">Experience</span>
         </button>
 
-        <button className="flex items-center justify-between  px-4 py-2 rounded-lg w-[180px]  transition">
-          <span className="text-gray-700">Education</span>
+        <button className="">
+          <span className="text-gray-700 flex md:px-2">Education</span>
         </button>
       </div>
     </div>
