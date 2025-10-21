@@ -113,7 +113,7 @@ const ResumeFormatBox = () => {
       </div>
 
       
-      <div className="text-gray-700 mb-30 ">
+      <div className="text-gray-700  ">
         <h3 className=" mb-2">
           Cultural Notes for {selectedCountry}:
         </h3>
