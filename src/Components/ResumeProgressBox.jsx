@@ -2,16 +2,16 @@ import React from "react";
 
 const ResumeProgressBox = () => {
   return (
-    <div className="bg-white shadow-md rounded-2xl p-6 mb-6">
+    <div className="bg-white shadow-md rounded-2xl p-6 mb-7">
     
       <div className="flex justify-between items-center mb-3">
-        <h2 className="text-xl font-semibold">Your Resume Progress</h2>
+        <h2 className="text-3xl font-bold text-[#3A0CA3]">Your Resume Progress</h2>
 
-        <div className="flex gap-3">
-          <button className="  px-3   border-1 flex flex-col md:flex-row  ">
+        <div className="flex gap-3 md:flex-row flex-col ">
+          <button className="  px-2  border-1  bg-[#3A0CA3]  rounded-lg text-white ">
             Preview Resume
           </button>
-          <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">
+          <button className="flex bg-[#3A0CA3] text-white px-4 py-2 rounded-lg md:flex-row flex-col ">
             Generate Resume
           </button>
         </div>
@@ -21,25 +21,26 @@ const ResumeProgressBox = () => {
       <p className="text-gray-600 mb-5">
         Continue all sections to make your resume ATS compatible.
       </p>
-      <p>Completion: 85%</p>
+
+      <p className="mb-6 mt-6 text-[#3A0CA3] text-2xl">Completion: 85%</p>
 
     
       <div className="w-full bg-gray-200 rounded-full h-3 mb-6">
-        <div className="bg-purple-600 h-3 rounded-full w-[85%]"></div>
+        <div className=" bg-[#3A0CA3] h-3 rounded-full w-[85%]"></div>
       </div>
 
      
       <div className="flex items-center gap-2">
         <button className="">
-          <span className="text-gray-700 px-4">Personal Info</span>
+          <span className=" text-[#3A0CA3] font-semibold px-2">Personal Info</span>
         </button>
 
         <button className="">
-          <span className="text-gray-700">Experience</span>
+          <span className=" text-[#3A0CA3] font-semibold px-15">Experience</span>
         </button>
 
         <button className="">
-          <span className="text-gray-700 flex md:px-2">Education</span>
+          <span className="text-[#3A0CA3] font-semibold flex md:px-15 ">Education</span>
         </button>
       </div>
     </div>

@@ -3,7 +3,7 @@ import React from "react";
 const ATSOptimizationTips = () => {
   return (
     <div className="bg-white p-6 rounded-2xl shadow-md mt-6">
-      <h2 className=" mb-4 text-purple-500">
+      <h2 className=" mb-4  text-[#3A0CA3] font-bold text-2xl">
         ATS Optimization Tips
       </h2>
     

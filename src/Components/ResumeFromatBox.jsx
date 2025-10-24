@@ -45,28 +45,26 @@ const ResumeFormatBox = () => {
   "Chad",
   "Chile",
   "China"
-
-
   ];
 
   return (
-    <div className="bg-white  mx-auto   mt-10 p-6  rounded-2xl shadow-mdp-6 mb-10 relative ">
+    <div className="bg-white  mx-auto   mt-10 p-6  rounded-2xl shadow-mdp-6 mb-10 relative e ">
     
-      <h2 className=" text-purple-500 mb-6">Resume Format by Country</h2>
+      <h2 className="  text-[#3A0CA3] text-3xl font-bold mb-3">Resume Format by Country</h2>
       <p className="mb-5">Choose the target country to preview resume format and localization notes</p>
 
     
       <div className="flex flex-col md:flex-row items-start gap-6 mb-6">
         
     
-        <div className="flex-1  relative">
-          <label className="block text-sm font-medium mb-2">
+        <div className="flex-1  relative ">
+          <label className="block text-2xl font-bold mb-2">
             Target Country/Region
           </label>
 
          
           <div
-            className="border border-amber-800 p-2 w-full cursor-pointer bg-white flex justify-between items-center"
+            className="  p-2 w-full cursor-pointer bg-white shadow-md flex justify-between items-center"
             onClick={() => setOpen(!open)}
           >
             <span>{selectedCountry}</span>
@@ -99,13 +97,13 @@ const ResumeFormatBox = () => {
         </div>
 
         
-        <div className="flex-1  p-4 bg-gray-50">
-          <h3 className=" text-gray-800 mb-2">
+        <div className="flex-1 ">
+          <h3 className=" text-gray-800 font-bold mb-2">
             Format Guidelines:
           </h3>
-          <ul className=" ml-5 text-sm text-gray-700 space-y-1">
+          <ul className=" ml-5 text-sm text-gray-700 space-y-1 font-semibold">
             <li>Max Pages: 2</li>
-            <li>No Photo Required</li>
+            <li>No Photo Required: NO</li>
             <li>Personal Details: Not Needed</li>
             <li>Date Format: MM/DD/YYYY</li>
           </ul>
@@ -113,8 +111,8 @@ const ResumeFormatBox = () => {
       </div>
 
       
-      <div className="text-gray-700  ">
-        <h3 className=" mb-2">
+      <div className="">
+        <h3 className=" mb-2  text-[#3A0CA3] font-bold ">
           Cultural Notes for {selectedCountry}:
         </h3>
         <ul className=" list-disc ml-5 text-sm space-y-1">
