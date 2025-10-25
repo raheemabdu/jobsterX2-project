@@ -1,40 +1,40 @@
 import React, { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, } from "lucide-react";
+
 
 const Navbar = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex ` bg-gray-50 relative">
-      
-      <div className="md:hidden fixed top-0 left-0 right-0 bg-white border-b border-gray-200 flex items-center justify-between px-4 py-3 z-30 w-full">
-        <h1 className="text-lg font-bold text-indigo-700">JOBSTER X</h1>
+    <div className="flex">
+    
+      <div className="md:hidden fixed top-0 left-0 right-0 bg-white border-b border-gray-200 flex items-center justify-between px-4  z-50">
+        <h1 className="text-lg font-bold text-[#3A0CA3]">JOBSTER X</h1>
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="p-2 rounded-md bg-gray-100"
         >
           {isOpen ? (
-            <X className="w-6 h-6 " />
+            <X className="w-6 h-6 text-[#3A0CA3]" />
           ) : (
-            <Menu className="w-6 h-6 text-indigo-700" />
+            <Menu className="w-6 h-6 text-[#3A0CA3]" />
           )}
         </button>
       </div>
-
-      
       <aside
-        className={`fixed top-0 left-0 h-full w-64 bg-white border-r border-gray-200 p-5 flex flex-col z-40 transform transition-transform duration-300 ease-in-out
+        className={`fixed top-0 left-0 h-full w-72 bg-white border-r border-gray-200 flex flex-col z-40 transform transition-transform duration-300 ease-in-out
           ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}
       >
-        <div className="flex-1">
-        
-          <h1 className="text-xl font-bold text-indigo-700 mb-6 hidden md:block">
+       
+        <div className="flex-1 overflow-y-auto p-5 pb-20 ">
+          {/* Logo (Desktop only) */}
+          <h1 className="text-xl font-bold text-[#3A0CA3] md:mb-6 mb-20 hidden md:block">
             JOBSTER X
           </h1>
 
-        
+          {/* Profile Section */}
           <div className="flex flex-col items-center text-center mb-6">
-            <div className="w-16 h-16 rounded-full bg-gray-200 mb-2"></div>
+            <div className="w-16 h-16  rounded-full bg-gray-300 mb-10 md:mb-10"></div>
             <h2 className="text-sm font-semibold">Sameer Saleem</h2>
             <p className="text-gray-500 text-xs">sameer@jobsterx.com</p>
 
@@ -47,10 +47,6 @@ const Navbar = ({ children }) => {
             </p>
 
            
-            
-
-
-
             <div className="w-full mt-2">
               <div className="flex justify-between text-[10px] text-gray-600 mb-1">
                 <span>Profile</span>
@@ -63,60 +59,58 @@ const Navbar = ({ children }) => {
                 ></div>
               </div>
               <div className="flex justify-between text-[10px] text-gray-500 mt-1">
-                <span>Next</span>
+                <span>Next Level</span>
                 <span>Expert</span>
               </div>
+              
             </div>
           </div>
-       
-
           
 
-         
-          <ul className="space-y-1.5">
+          <ul className="space-y-1.5 font-medium">
             <li className="flex items-center gap-2 text-gray-700 hover:bg-gray-100 p-2 rounded cursor-pointer text-sm">
               📄 Lorem Ipsum
             </li>
             <li className="flex items-center gap-2 text-gray-700 hover:bg-gray-100 p-2 rounded cursor-pointer text-sm">
               📄 Lorem Ipsum
             </li>
-            <li className="flex items-center gap-2 bg-indigo-600 text-white p-2 rounded cursor-pointer text-sm">
+            <li className="flex items-center gap-2 bg-[#3A0CA3] text-white p-2 rounded cursor-pointer text-sm">
               📄 Build your Resume
             </li>
             <li className="flex items-center gap-2 text-gray-700 hover:bg-gray-100 p-2 rounded cursor-pointer text-sm">
               📄 Lorem Ipsum
             </li>
-             <li className="flex items-center gap-2 text-gray-700 hover:bg-gray-100 p-2 rounded cursor-pointer text-sm">
+            <li className="flex items-center gap-2 text-gray-700 hover:bg-gray-100 p-2 rounded cursor-pointer text-sm">
               📄 Lorem Ipsum
             </li>
-             <li className="flex items-center gap-2 text-gray-700 hover:bg-gray-100 p-2 rounded cursor-pointer text-sm">
+            <li className="flex items-center gap-2 text-gray-700 hover:bg-gray-100 p-2 rounded cursor-pointer text-sm">
               📄 Lorem Ipsum
             </li>
-            
-            
           </ul>
         </div>
 
-     
-        <div className="mt-6">
-          <div className="bg-indigo-600 text-white rounded-lg p-2.5 flex justify-between items-center text-sm">
-            <span>🔥 Streak</span>
-            <span className="font-semibold">7d</span>
-          </div>
-          <p className="text-[10px] text-gray-500 mt-1.5">Since Jan 2024</p>
-          <p className="text-[10px] text-red-500 mt-0.5 cursor-pointer">↩ Sign Out</p>
+ 
+        <div className="bg-[#3A0CA3] text-white rounded-lg mx-5 mb-3 p-2.5 flex justify-between items-center text-sm">
+          <span>🔥 Streak</span>
+          <span className="font-semibold">7 days</span>
         </div>
+        <p className="text-[10px] text-gray-500 text-center mb-1">
+          Member since Jan 2024
+        </p>
+        <p className="text-[10px] text-red-500 text-center mb-3 cursor-pointer">
+          ↩ Sign Out Logo
+        </p>
       </aside>
 
      
-      <main className="flex-1 md:ml-64% p-6 mt-14 md:mt-0  transition-all">
+      <main className="flex-1 md:ml-72 p-6 mt-14 md:mt-0 transition-all">
         {children}
       </main>
 
     
       {isOpen && (
         <div
-          className="fixed inset-0 bg-opacity-30 z-20 md:hidden"
+          className="fixed inset-0  bg-opacity-30 z-20 md:hidden"
           onClick={() => setIsOpen(false)}
         ></div>
       )}
