@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { X } from "lucide-react"; 
+import { X } from "lucide-react"; // 👈 Added for close icon
 import ResumeProgressBox from "./Components/ResumeProgressBox";
 import ResumeFormatBox from "./Components/ResumeFromatBox";
 import ResumeDownloadHistory from "./Components/ResumeDownloadHistory";
@@ -25,7 +25,7 @@ const App = () => {
   return (
     <div className="min-h-screen bg-gray-100 flex justify-center p-6 w-[75%] md:ml-auto md:mr-0 ml-20">
       <div className="w-full max-w-4xl">
-       
+        {/* --------- HEADER --------- */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between justify-center mb-8">
           <div>
             <h1 className="text-3xl font-bold text-zinc-700 mt-15">
@@ -44,6 +44,7 @@ const App = () => {
           </button>
         </div>
 
+        {/* --------- COMPONENTS --------- */}
         <ResumeProgressBox />
         <ResumeFormatBox />
         <ResumeDownloadHistory />
@@ -51,11 +52,11 @@ const App = () => {
         <Navbar />
       </div>
 
-     
+      {/* --------- MODAL --------- */}
       {showModal && (
         <div className="fixed inset-0 flex items-center justify-center  bg-opacity-40 z-50 transition-opacity duration-300">
           <div className="bg-white rounded-xl p-6 w-full max-w-3xl md:h-[70vh] h-[80%] md:ml-30 overflow-y-auto relative shadow-lg animate-fadeIn">
-           
+            {/* CLOSE BUTTON */}
             <button
               onClick={() => {
                 setShowModal(false);
@@ -69,7 +70,7 @@ const App = () => {
               <X className="w-6 h-6" />
             </button>
 
-           
+            {/* --------- MODAL CONTENT --------- */}
             <h2 className="text-3xl font-bold text-gray-800 mb-2">
               Resume JD Score Analysis
             </h2>
@@ -84,17 +85,17 @@ const App = () => {
               Paste Your Resume Content
             </h2>
 
-         
+            {/* TEXTAREA */}
             <textarea
               value={resumeText}
               onChange={(e) => setResumeText(e.target.value)}
               placeholder="Paste your resume content here..."
-              className="w-full border border-gray-300 p-3 rounded-md mb-3 focus:outline-none focus:ring-2 focus:ring-black-500"
+              className="w-full border border-gray-300 p-3 rounded-md mb-3 focus:outline-none focus:ring-2 focus:ring-purple-500"
               rows={6}
             />
             {error && <p className="text-red-500 text-sm mb-3">{error}</p>}
 
-         
+            {/* ANALYZE BUTTON */}
             <div className="sticky bottom-0 bg-white pt-3 pb-2">
               <button
                 onClick={handleAnalyze}
@@ -104,7 +105,7 @@ const App = () => {
               </button>
             </div>
 
-          
+            {/* RESULTS SECTION */}
             {showResults && (
               <div className="mt-4 space-y-5">
                 <div className="flex justify-between bg-gray-100 p-4 rounded-lg shadow-sm">
