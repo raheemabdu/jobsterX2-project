@@ -1,120 +1,131 @@
 import React, { useState } from "react";
-import { Menu, X, } from "lucide-react";
+import { Menu, X, FileText } from "lucide-react";
 
-
-const Navbar = ({ children }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const Navbar = () => {
+  const [open, setOpen] = useState(false);
 
   return (
-    <div className="flex">
-    
-      <div className="md:hidden fixed top-0 left-0 right-0 bg-white border-b border-gray-200 flex items-center justify-between px-4  z-50">
-        <h1 className="text-lg font-bold text-[#3A0CA3]">JOBSTER X</h1>
+    <>
+      {/* 🔹 Only the top-right menu button on mobile */}
+      <div className="lg:hidden fixed top-4 right-4 z-50">
         <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="p-2 rounded-md bg-gray-100"
+          onClick={() => setOpen(!open)}
+          className="bg-white shadow-md p-2 rounded-md"
         >
-          {isOpen ? (
-            <X className="w-6 h-6 text-[#3A0CA3]" />
-          ) : (
-            <Menu className="w-6 h-6 text-[#3A0CA3]" />
-          )}
+          {open ? <X size={26} /> : <Menu size={26} />}
         </button>
       </div>
-      <aside
-        className={`fixed top-0 left-0 h-full w-72 bg-white border-r border-gray-200 flex flex-col z-40 transform transition-transform duration-300 ease-in-out
-          ${isOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}
+
+      {/* 🔹 Sidebar */}
+      <div
+        className={`fixed top-0 left-0 h-full w-72 bg-white shadow-md z-40 transform transition-transform duration-300
+        ${open ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0`}
       >
-       
-        <div className="flex-1 overflow-y-auto p-5 pb-20 ">
-          {/* Logo (Desktop only) */}
-          <h1 className="text-xl font-bold text-[#3A0CA3] md:mb-6 mb-20 hidden md:block">
-            JOBSTER X
-          </h1>
+        {/* Scrollable Sidebar Content */}
+        <div className="h-full overflow-y-auto p-6">
+          {/* Logo */}
+          <div className="flex items-center gap-2 mb-6">
+            {/* <img src="/logo.png" alt="JobsterX" className="w-8 h-8" /> */}
+            <h1 className="text-xl font-semibold text-purple-700">JOBSTER X</h1>
+          </div>
 
           {/* Profile Section */}
-          <div className="flex flex-col items-center text-center mb-6">
-            <div className="w-16 h-16  rounded-full bg-gray-300 mb-10 md:mb-10"></div>
-            <h2 className="text-sm font-semibold">Sameer Saleem</h2>
-            <p className="text-gray-500 text-xs">sameer@jobsterx.com</p>
+          <div className="text-center mb-8">
+            {/* Profile Pic */}
+            <div className="w-24 h-24 rounded-full bg-gray-300 mx-auto mb-3"></div>
 
-            <button className="mt-2 bg-indigo-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
-              Premium
-            </button>
+            <h2 className="font-semibold text-lg">Sameer Saleem</h2>
+            <p className="text-sm text-gray-500 mb-2">sameer@jobsterx.com</p>
 
-            <p className="mt-1 text-xs text-gray-600 font-medium">
-              Level Professional
-            </p>
+            {/* Premium + Level */}
+            <div className="flex justify-center items-center gap-2 mb-3">
+              <span className="bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">
+                Premium
+              </span>
+              <span className="bg-gray-100 text-gray-600 text-xs font-medium px-2 py-1 rounded">
+                Level Professional
+              </span>
+            </div>
 
-           
-            <div className="w-full mt-2">
-              <div className="flex justify-between text-[10px] text-gray-600 mb-1">
+            {/* Profile Bar */}
+            <div className="w-full text-left text-sm text-gray-600 mb-1">
+              <div className="flex justify-between items-center">
                 <span>Profile</span>
-                <span>85%</span>
+                <span className="text-xs font-medium text-gray-700">85%</span>
               </div>
-              <div className="w-full bg-gray-200 rounded-full h-1.5">
-                <div
-                  className="bg-indigo-600 h-1.5 rounded-full"
-                  style={{ width: "85%" }}
-                ></div>
+              <div className="w-full bg-gray-200 h-2 rounded-full">
+                <div className=" h-2 bg-[#7209B7] w-[85%] rounded-full"></div>
               </div>
-              <div className="flex justify-between text-[10px] text-gray-500 mt-1">
+            </div>
+
+            {/* Next Level Bar */}
+            <div className="w-full text-left text-sm text-gray-600 mt-2">
+              <div className="flex justify-between items-center">
                 <span>Next Level</span>
-                <span>Expert</span>
+                <span className="text-xs font-medium text-gray-700">Expert</span>
               </div>
-              
+              <div className="w-full bg-gray-200 h-2 rounded-full">
+                <div className="bg-[#7209B7] h-2 w-[50%] rounded-full"></div>
+              </div>
             </div>
           </div>
-          
 
-          <ul className="space-y-1.5 font-medium">
-            <li className="flex items-center gap-2 text-gray-700 hover:bg-gray-100 p-2 rounded cursor-pointer text-sm">
-              📄 Lorem Ipsum
-            </li>
-            <li className="flex items-center gap-2 text-gray-700 hover:bg-gray-100 p-2 rounded cursor-pointer text-sm">
-              📄 Lorem Ipsum
-            </li>
-            <li className="flex items-center gap-2 bg-[#3A0CA3] text-white p-2 rounded cursor-pointer text-sm">
-              📄 Build your Resume
-            </li>
-            <li className="flex items-center gap-2 text-gray-700 hover:bg-gray-100 p-2 rounded cursor-pointer text-sm">
-              📄 Lorem Ipsum
-            </li>
-            <li className="flex items-center gap-2 text-gray-700 hover:bg-gray-100 p-2 rounded cursor-pointer text-sm">
-              📄 Lorem Ipsum
-            </li>
-            <li className="flex items-center gap-2 text-gray-700 hover:bg-gray-100 p-2 rounded cursor-pointer text-sm">
-              📄 Lorem Ipsum
-            </li>
-          </ul>
+          {/* Activity Status + Menu */}
+          <div>
+            <h3 className="text-sm text-gray-600 font-medium mb-3 mt-3">
+              
+            </h3>
+            <ul className="space-y-3 text-lg font-medium">
+              <li className="flex items-center gap-2 text-gray-600 cursor-pointer hover:text-purple-700">
+                <FileText size={18} />
+                Lorem Ipsum
+              </li>
+              <li className="flex items-center gap-2 text-gray-600 cursor-pointer hover:text-purple-700">
+                <FileText size={18} />
+                Lorem Ipsum
+              </li>
+              <li className="flex items-center gap-2 bg-gradient-to-b from-[#3A0CA3] to-[#7209B7] text-white font-medium p-2 rounded-md cursor-pointer">
+                <FileText size={18} />
+                Build your Resume
+              </li>
+              <li className="flex items-center gap-2 text-gray-600 cursor-pointer hover:text-purple-700">
+                <FileText size={18} />
+                Lorem Ipsum
+              </li>
+              <li className="flex items-center gap-2 text-gray-600 cursor-pointer hover:text-purple-700">
+                <FileText size={18} />
+                Lorem Ipsum
+              </li>
+                <li className="flex items-center gap-2 text-gray-600 cursor-pointer hover:text-purple-700">
+                <FileText size={18} />
+                Lorem Ipsum
+              </li>
+              {/* extra items to make scroll visible */}
+             
+            </ul>
+          </div>
+
+          {/* Bottom Section */}
+          <div className="mt-8 text-center">
+            <div className=" bg-gradient-to-b from-[#3A0CA3] to-[#7209B7] text-white text-sm px-7 py-3 rounded-md font-medium w-full justify-between items-end">
+              🔥Streak        7 days
+            </div>
+            <p className="text-xs text-gray-500 mt-2">Member since Jan 2024</p>
+            <button className="text-red-500 text-xs mt-2 hover:underline">
+              Sign Out
+            </button>
+          </div>
         </div>
+      </div>
 
- 
-        <div className="bg-[#3A0CA3] text-white rounded-lg mx-5 mb-3 p-2.5 flex justify-between items-center text-sm">
-          <span>🔥 Streak</span>
-          <span className="font-semibold">7 days</span>
-        </div>
-        <p className="text-[10px] text-gray-500 text-center mb-1">
-          Member since Jan 2024
-        </p>
-        <p className="text-[10px] text-red-500 text-center mb-3 cursor-pointer">
-          ↩ Sign Out Logo
-        </p>
-      </aside>
-
-     
-      <main className="flex-1 md:ml-72 p-6 mt-14 md:mt-0 transition-all">
-        {children}
-      </main>
-
-    
-      {isOpen && (
+      {/* 🔹 Overlay on Mobile */}
+      {open && (
         <div
-          className="fixed inset-0  bg-opacity-30 z-20 md:hidden"
-          onClick={() => setIsOpen(false)}
+          onClick={() => setOpen(false)}
+          className="fixed inset-0 bg-black/30 backdrop-blur-sm lg:hidden z-30"
         ></div>
       )}
-    </div>
+    </>
   );
 };
 
