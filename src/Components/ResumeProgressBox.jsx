@@ -45,7 +45,7 @@ const ResumeProgressBox = () => {
         ].map((section) => (
           <button
             key={section}
-            className="flex items-center justify-center gap-1  py-1  transition-all duration-200 md:mr-40 font-bold"
+            className="flex items-center justify-center gap-1  py-1  transition-all duration-200 md:mr-20 font-bold"
           >
             <CheckCircle className="text-[#3A0CA3] w-5 h-5" />
             <span className="text-[#3A0CA3] ">{section}</span>
