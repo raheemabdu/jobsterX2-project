@@ -48,7 +48,7 @@ const ResumeFormatBox = () => {
   ];
 
   return (
-    <div className="bg-white  mx-auto   mt-10 p-6  rounded-2xl shadow-mdp-6 mb-10 relative e ">
+    <div className="bg-white  mx-auto   mt-10 p-6  rounded-2xl shadow-mdp-6 mb-10 relative   shadow-md  ">
     
       <h2 className="  text-[#3A0CA3] text-2xl font-bold ">Resume Format by Country</h2>
       <p className="mb-2 text-gray-600 text-xs">Choose the target country to preview resume format and localization notes</p>

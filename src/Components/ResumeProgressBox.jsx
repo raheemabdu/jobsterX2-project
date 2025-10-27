@@ -3,10 +3,10 @@ import { CheckCircle, Eye, FileText } from "lucide-react";
 
 const ResumeProgressBox = () => {
   return (
-    <div className="bg-white shadow-md rounded-2xl p-6  font-[Poppins]">
+    <div className="bg-white shadow-md rounded-2xl p-6  font-[Poppins] ">
       {/* Header and top buttons */}
-      <div className="flex flex-col md:flex-row md:justify-between md:items-center ">
-        <h2 className="text-2xl  font-semibold text-[#3A0CA3]  md:mb-0">
+      <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-1">
+        <h2 className="text-2xl  font-semibold text-[#3A0CA3]  md:mb-2">
           Your Resume Progress
         </h2>
 
@@ -28,9 +28,9 @@ const ResumeProgressBox = () => {
       </p>
 
       {/* Progress Bar */}
-      <p className="mb-3 mt-6 text-[#3A0CA3] ">Completion: 85%</p>
+      <p className="mb-3 mt-6 text-[#3A0CA3] text-xs ">Completion: 85%</p>
       <div className="w-full bg-gray-200 rounded-full h-3 mb-6">
-        <div className="bg-[#3A0CA3] h-3 rounded-full w-[85%]"></div>
+        <div className="bg-[#3A0CA3] h-2 rounded-full w-[85%]"></div>
       </div>
 
       {/* Section Buttons with Icons */}
@@ -45,7 +45,7 @@ const ResumeProgressBox = () => {
         ].map((section) => (
           <button
             key={section}
-            className="flex items-center justify-center gap-2  py-2  transition-all duration-200"
+            className="flex items-center justify-center gap-1  py-1  transition-all duration-200 md:mr-47 font-bold"
           >
             <CheckCircle className="text-[#3A0CA3] w-5 h-5" />
             <span className="text-[#3A0CA3] ">{section}</span>

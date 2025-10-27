@@ -22,20 +22,20 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex justify-center p-6 w-[75%] md:ml-auto md:mr-0 ml-20 font-[Poppins]">
-      <div className="w-full max-w-4xl">
+    <div className="min-h-screen  flex justify-center p-6 w-[75%] md:ml-auto md:mr-13 ml-20 font-[Poppins] mt-20 ">
+      <div className="w-full max-w-5xl">
         {/* -------- HEADER -------- */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between justify-center mb-20">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between justify-center mb-5">
           <div>
-            <h1 className="text-3xl font-bold text-zinc-700 ">Resume Builder</h1>
-            <p className="text-gray-600 mt-1">
+            <h1 className="text-3xl font-bold text-zinc-700 md:ml-10 ">Resume Builder</h1>
+            <p className="text-gray-600 mt-1 md:ml-10">
               Create ATS-optimized resumes that get you noticed.
             </p>
           </div>
 
           <button
             onClick={() => setShowModal(true)}
-            className="bg-gradient-to-b from-[#3A0CA3] to-[#7209B7] text-white px-6 py-2 rounded-xl hover:opacity-90 transition mt-3"
+            className="bg-gradient-to-b from-[#3A0CA3] to-[#7209B7] text-white px-6 py-2 rounded-xl hover:opacity-90 transition mt-3 mr-12 "
           >
             Get Your Resume to Score
           </button>
