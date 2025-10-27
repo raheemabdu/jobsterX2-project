@@ -23,10 +23,9 @@ const Navbar = () => {
       >
         {/* Scrollable Sidebar Content */}
         <div className="h-full overflow-y-auto p-6">
-          
           {/* 🔸 Logo Section */}
           <div className="flex items-center gap-2 mb-16">
-            <h1 className="text-xl font-semibold text-purple-700">JOBSTER X</h1>
+            <link rel="icon" type="image/svg+xml" href="./src/assets/logo.p.png" />
           </div>
 
           {/* 🔸 Profile Section */}
@@ -58,7 +57,7 @@ const Navbar = () => {
             </div>
 
             {/* Next Level Bar */}
-            <div className="w-full text-left text-sm text-gray-600">
+            <div className="w-full text-left text-sm text-gray-600 mb-6">
               <div className="flex justify-between items-center mb-1">
                 <span>Next Level</span>
                 <span className="text-xs font-medium text-gray-700">Expert</span>
@@ -67,12 +66,19 @@ const Navbar = () => {
                 <div className="bg-[#7209B7] h-2 w-[50%] rounded-full"></div>
               </div>
             </div>
+
+            {/* 🔹 Activity Status Section */}
+           <div className="border-b border-black-200 pt-4  ">
+  <p className="text-sm font-medium text-[#3A0CA3] text-center mb-6">
+    Activity Status
+  </p>
+</div>
           </div>
 
           {/* 🔸 Activity + Menu Section */}
-          <div className="mb-16 ">
+          <div className="mt-6">
             <ul className="space-y-3 text-lg font-medium">
-              <li className="flex items-center gap-2 text-gray-600 cursor-pointer hover:text-purple-700 ">
+              <li className="flex items-center gap-2 text-gray-600 cursor-pointer hover:text-purple-700">
                 <FileText size={18} />
                 Lorem Ipsum
               </li>
@@ -80,7 +86,7 @@ const Navbar = () => {
                 <FileText size={18} />
                 Lorem Ipsum
               </li>
-              <li className="flex items-center gap-2 bg-gradient-to-b from-[#3A0CA3] to-[#7209B7] text-white font-medium p-3 rounded-md cursor-pointer">
+              <li className="flex items-center gap-2 bg-gradient-to-b from-[#3A0CA3] to-[#7209B7] text-white font-medium p-2 rounded-md cursor-pointer">
                 <FileText size={18} />
                 Build your Resume
               </li>
@@ -100,8 +106,8 @@ const Navbar = () => {
           </div>
 
           {/* 🔸 Bottom Section */}
-          <div className="text-center mb-16">
-            <div className=" bg-gradient-to-b from-[#3A0CA3] to-[#7209B7] text-white text-sm px-7 py-4 rounded-md font-medium w-full">
+          <div className="text-center mb-16 mt-10">
+            <div className="bg-gradient-to-b from-[#3A0CA3] to-[#7209B7] text-white text-sm px-7 py-4 rounded-md font-medium w-full">
               🔥 Streak 7 days
             </div>
             <p className="text-xs text-gray-500 mt-4">Member since Jan 2024</p>
