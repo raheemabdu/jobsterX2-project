@@ -30,7 +30,7 @@ const Navbar = () => {
           </div>
 
           {/* 🔸 Profile Section */}
-          <div className="text-center mb-22">
+          <div className="text-center mb-15">
             <div className="w-24 h-24 rounded-full bg-gray-300 mx-auto mb-5"></div>
 
             <h2 className="font-semibold text-lg">Sameer Saleem</h2>

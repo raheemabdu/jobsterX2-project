@@ -22,7 +22,7 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen  flex justify-center p-6 w-[75%] md:ml-auto md:mr-13 ml-20 font-[Poppins] mt-20 ">
+    <div className="min-h-screen  flex justify-center p-6 w-[75%] md:ml-auto md:mr-7 font-[Poppins] mt-20 ">
       <div className="w-full max-w-5xl">
         {/* -------- HEADER -------- */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between justify-center mb-5">
