@@ -89,7 +89,7 @@ const SubscriptionAndInvoice = () => {
           </div>
           <div className="flex items-center gap-2">
             <CheckCircle size={18} className="text-purple-600" />
-            <p>Priority support</p>
+            <p>Priority supports</p>
           </div>
           <div className="flex items-center gap-2">
             <CheckCircle size={18} className="text-purple-600" />
